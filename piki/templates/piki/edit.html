@@ -1,0 +1,11 @@
+<html>
+	<head><title>{{ page_name }} - Edit</title></head>
+	<body>
+		<h1>Editing {{ page_name }}</h1>
+		<form method="post" action="/piki/{{page_name}}/save/">
+			{% csrf_token %}
+			<textarea name="page_content" rows="20" cols="60">{{ page_content }}</textarea>
+			<input type="submit" value="Save Page" />
+		</form>
+	</body>
+</html>

@@ -1,0 +1,12 @@
+<html>
+{% load creolemarkup %}
+	<head><title>{{ page_name }}</title></head>
+	<body>
+{% filter creole %}
+{% autoescape off %}
+{{ page_content }}
+{% endautoescape %}
+{% endfilter %}
+<h2><a href='/piki/{{ page_name }}/edit'>Edit?</a></h2>
+	</body>
+</html>
